@@ -17,7 +17,7 @@ from Attention_layer import Attention_layer
 QUESTION_MAX_SEQUENCE_LENGTH = 80
 ANSWER_MAX_SEQUENCE_LENGTH = 100
 EMBEDDING_DIM = 100
-VALIDATION_SPLIT = 0.3
+VALIDATION_SPLIT = 0.2
 
 
 def clean_str(string):
@@ -126,4 +126,4 @@ model.compile(loss='categorical_crossentropy',
 
 model.summary()
 
-model.fit([question_data,answer_data],labels,validation_split=0.4,nb_epoch=20,batch_size=4)
+model.fit([question_data,answer_data],labels,validation_split=VALIDATION_SPLIT,nb_epoch=20,batch_size=8)
