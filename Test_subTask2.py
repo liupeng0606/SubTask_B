@@ -1,5 +1,4 @@
 import os
-os.environ['KERAS_BACKEND']='theano'
 import keras
 import numpy as np
 import pandas as pd
@@ -126,4 +125,4 @@ model.compile(loss='categorical_crossentropy',
 
 model.summary()
 
-model.fit([question_data,answer_data],labels,validation_split=VALIDATION_SPLIT,nb_epoch=20,batch_size=8)
+model.fit([question_data,answer_data],labels,validation_split=VALIDATION_SPLIT,nb_epoch=20,batch_size=256)
